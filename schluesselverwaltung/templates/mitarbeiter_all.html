@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mitarbeiter</title>
+</head>
+<body>
+    <h1> Mitarbeiter</h1>
+    <table style="width:50%">
+         <thead>
+            <tr>
+             <th>Detail ansicht</th>
+             <th>Vorname</th>
+             <th>Nachname</th>
+             <th>Personalnummer</th>
+            </tr>
+         </thead>
+         <tbody>
+            {%for mitarbeiter in ma%}
+
+                <tr>
+                <td><a href="/schluesselverwaltung/get/{{ mitarbeiter.personalnummer }}/"> Hier </a></td>
+                <td>{{ mitarbeiter.vorname }}</td>
+                <td>{{ mitarbeiter.nachname }}</td>
+                <td>{{ mitarbeiter.personalnummer }}</td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+</html>
