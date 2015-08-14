@@ -16,6 +16,7 @@ class Mitarbeiter(models.Model):
     )
     gruppe = models.CharField('Abteilung',max_length=7, choices=ABTEILUNG, default=False)
 
+
     def __str__(self):
        return '%s, %s, %s' % (self.nachname, self.vorname, self.personalnummer)
 
@@ -26,7 +27,6 @@ class Lager(models.Model):
 
     def __str__(self):
         return '%s, %s' % (self.raum, self.schrank)
-
 
 class Tuer(models.Model):
     seriennummer = models.CharField('Seriennummer', max_length=30)
